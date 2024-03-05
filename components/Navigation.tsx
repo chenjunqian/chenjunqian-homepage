@@ -35,6 +35,14 @@ export const NavigationItems = [
     },
 ] as const;
 
+export const NavLink = ({ href, children }: React.PropsWithChildren<{ href: string }>) => {
+    return (
+        <Link href={href} className="transition hover:text-primary">
+            {children}
+        </Link>
+    );
+};
+
 const NavItem = ({ href, children }: React.PropsWithChildren<{ href: string }>) => {
     const isActive = true;
 
